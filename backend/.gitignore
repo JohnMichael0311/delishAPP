@@ -14,11 +14,3 @@ coverage/
 .idea/
 Thumbs.db
 .DS_Store
-# Docker ignores
-npm-debug.log
-dist
-coverage
-*.test.js
-*.spec.js
-Dockerfile
-.dockerignore
