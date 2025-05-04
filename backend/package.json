@@ -7,7 +7,7 @@
   "scripts": {
     "start": "node src/server.js",
     "dev": "nodemon src/server.js",
-    "test": "jest",
+    "test": "jest --config jest.config.js",
     "monitor": "node src/scripts/monitor-performance.js",
     "monitor:live": "watch 'node src/scripts/monitor-performance.js' ./src/logs/performance",
     "redis:start": "cd .. && start-redis.bat",
