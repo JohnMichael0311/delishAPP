@@ -1,0 +1,70 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  margin-top: 3rem;
+  background-color: transparent; /* Keeping the background light */
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.menu a {
+  width: 24rem;
+  height: 13rem;
+  margin: 1.5rem;
+  background-color: #ffffff; /* Neutral white background */
+  border: 2px solid #e26526;
+  border-radius: 5%; 
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  text-decoration: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+.menu a:hover {
+  transform: translateY(-0.3rem);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Slightly darker hover shadow */
+}
+
+.menu img {
+  width: 7rem;
+  height: 7rem;
+  border-radius: 50%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.menu img:hover {
+  transform: scale(1.05);
+}
+
+.menu h2 {
+  font-size: 1.5rem; /* Matches the reference font size */
+  color: black; /* Neutral text color */
+  font-weight: 500;
+}
+
+.menu a:nth-child(1),
+.menu a:nth-child(2),
+.menu a:nth-child(3),
+.menu a:nth-child(4) {
+  background-color: #ffffff; /* Keeping the background neutral and clean */
+  color: #ff6f00; /* Accent color for text */
+}
+
+.menu a:hover {
+  background-color: #ff6f00; /* Primary reference color for hover effect */
+  color: white; /* Contrast white text on hover */
+}

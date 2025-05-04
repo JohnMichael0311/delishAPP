@@ -1,0 +1,100 @@
+.hero-section {
+  background-color: #f97316;
+  color: white;
+  text-align: center;
+  padding: 2rem;
+}
+
+/* Center the search section */
+.searchSection {
+  display: flex;
+  justify-content: center; /* Horizontally centers the search bar */
+  align-items: center; /* Vertically centers the search bar */
+  margin-top: 20px; /* Add some margin for spacing */
+  width: 100%; /* Ensures the section spans the width of the container */
+}
+  .card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    text-align: center;
+  }
+  
+  .landing-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 20px;
+    background-color: #fff;
+  }
+  
+  .section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin: 20px 0;
+    width: 80%;
+    max-width: 1200px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    background-color: #fff;
+  }
+  
+  .section img {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .highlight {
+    background-color: #ff9900;
+    padding: 40px;
+    color: white;
+    text-align: center;
+  }
+  
+  .landingPageContainer {
+  text-align: center;
+  padding: 20px;
+}
+
+.heroSection {
+  background-color: #f8f8f8;
+  padding: 50px;
+}
+
+.searchSection {
+  margin-top: 30px;
+}
+
+.featuresSection {
+  margin-top: 50px;
+  padding: 20px;
+  background-color: #f2f2f2;
+}
+
+.featuresSection ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.featuresSection li {
+  margin: 10px 0;
+}
+
+.divider {
+  height: 2px; /* Thickness of the divider */
+  background-color: #f97316; /* Match the primary accent color */
+  margin: 40px auto; /* Add spacing between the sections */
+  width: 80%; /* Width of the divider */
+}
+
+.footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #222; /* Dark background for contrast */
+  color: #fff; /* White text for readability */
+}

@@ -1,0 +1,53 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js",
+    "test": "jest",
+    "monitor": "node src/scripts/monitor-performance.js",
+    "monitor:live": "watch 'node src/scripts/monitor-performance.js' ./src/logs/performance",
+    "redis:start": "cd .. && start-redis.bat",
+    "redis:stop": "cd .. && stop-redis.bat",
+    "dev:with-redis": "npm run redis:start && nodemon src/server.js",
+    "preload-cache": "node src/scripts/preloadCache.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cloudinary": "^1.41.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.18.2",
+    "express-async-handler": "^1.2.0",
+    "express-graphql": "^0.12.0",
+    "form-data": "^4.0.0",
+    "helmet": "^8.0.0",
+    "jsonwebtoken": "^9.0.0",
+    "mailgun.js": "^9.4.1",
+    "mongoose": "^7.3.0",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.5-lts.1",
+    "redis": "^4.7.0",
+    "stripe": "^18.1.0",
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-ui-express": "^5.0.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.27.1",
+    "@babel/preset-env": "^7.27.1",
+    "@babel/preset-react": "^7.27.1",
+    "babel-jest": "^29.7.0",
+    "jest": "^29.7.0",
+    "jest-environment-node": "^29.7.0",
+    "jest-transform-stub": "^2.0.0",
+    "mongodb-memory-server": "^10.1.4",
+    "nodemon": "^2.0.22",
+    "supertest": "^7.1.0"
+  }
+}

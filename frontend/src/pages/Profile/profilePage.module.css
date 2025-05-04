@@ -1,0 +1,49 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  margin-top: 3rem;
+  background-color: transparent; /* Keeping background light */
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.details {
+  width: 28rem;
+  background-color: #fff7e6; /* Light color related to #ff6f00 */
+  color: black; /* Neutral text color */
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  border: 2px solid #ff6f00; /* Border using #ff6f00 */
+}
+
+h2, label {
+  margin-bottom: 1rem;
+  font-size: 1.5rem; /* Thicker text */
+  color: black; /* Accent text color */
+}
+
+input {
+  border: 2px solid #ff9f40; /* Related to #ff6f00 for a softer accent */
+  border-radius: 5px;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  color: black; /* Neutral input text color */
+}
+
+button {
+  background-color: #ff6f00; /* Primary button background */
+  color: white; /* White text for button */
+  border: none;
+  border-radius: 5px;
+  padding: 0.7rem 1.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #cc5800; /* Darker shade for hover effect */
+}

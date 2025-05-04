@@ -1,0 +1,62 @@
+.container {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+  margin-bottom: 10rem;
+  background: rgba(255, 255, 255, 0.8); /* Transparent white */
+  border-radius: 1.5rem; /* Optional: adds rounded corners */
+  padding: 2rem; /* Optional: adds spacing inside the container */
+  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.2); /* Optional: adds depth */
+}
+
+.list {
+  margin: 1rem;
+  max-width: 70rem;
+}
+
+a.add_food {
+  display: inline-block;
+  background: darkred;
+  color: white;
+  padding: 0.7rem;
+  margin: 0.8rem 0;
+  border-radius: 1.5rem;
+  text-decoration: none;
+}
+
+a.add_food:hover {
+  opacity: 0.9;
+}
+
+.list_item {
+  display: grid;
+  grid-template-columns:
+    minmax(5rem, 7rem)
+    minmax(10rem, 20rem)
+    minmax(5rem, 10rem)
+    minmax(5rem, 10rem);
+  font-size: 1.2rem;
+  height: 5rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.list_item img {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 100rem;
+  object-fit: cover;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15); /* Adds depth to images */
+}
+
+.actions > a {
+  margin-right: 1rem;
+  color: darkblue;
+  cursor: pointer;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.actions > a:hover {
+  text-decoration: underline;
+}

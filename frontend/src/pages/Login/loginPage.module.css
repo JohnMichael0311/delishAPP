@@ -1,0 +1,105 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  background: linear-gradient(135deg, #ffffff, #ff6f00);
+  padding: 0rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.details {
+  width: 25rem; /* Reduced size */
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 1.5rem; /* Reduced padding */
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.details:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.details form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem; /* Adjusted spacing */
+}
+
+.details form input,
+.details form button {
+  padding: 0.6rem 0.8rem; /* Reduced padding */
+  font-size: 0.9rem; /* Slightly smaller text */
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.details form input:focus {
+  border-color: #ff6f0096;
+  box-shadow: 0 0 5px rgba(255, 111, 0, 0.5);
+}
+
+/* .details form button {
+  background-color: #ff6f00;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 0.9rem;
+} */
+
+.details form button:hover {
+  background-color: #2ae600;
+  box-shadow: 0 4px 10px rgba(231, 132, 57, 0.3);
+}
+
+.register {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+}
+
+.register a {
+  color: #ff6f00;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.register a:hover {
+  color: #e65a00;
+}
+
+.header-buttons {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 1rem;
+}
+
+.header-button {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  background-color: #ff6f00;
+  color: #fff;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease;
+}
+
+.header-button:hover {
+  background-color: #e65a00;
+}
+
+.header-button span {
+  margin-left: 0.5rem;
+}

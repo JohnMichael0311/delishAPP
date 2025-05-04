@@ -1,0 +1,158 @@
+/* Overall Background */
+body {
+  background: linear-gradient(135deg, white 5%, #ff6f00 50%);
+  font-family: 'Quicksand', sans-serif;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  color: #280909c1;
+  overflow-x: hidden; 
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: center;
+  margin: 3rem auto;
+  padding: 2rem;
+  background: rgba(236, 240, 241, 0.95);
+  border-radius: 1.5rem;
+  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.3);
+  max-width: 1100px;
+  z-index: 1; /* Ensure it is above the gradient */
+}
+/* List of Items */
+.list {
+  display: flex;
+  flex-direction: column;
+  flex: 2 0;
+  justify-content: space-evenly;
+  border: 1px solid #ff6f00;
+  border-radius: 1rem;
+  list-style-type: none;
+  margin: 1rem;
+  padding: 0;
+  background: white;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Individual List Item */
+.list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  border-bottom: 1px solid #2c3e50;
+  padding: 1.5rem 1rem;
+  transition: transform 0.2s, background-color 0.3s;
+}
+
+.list li:last-child {
+  border: none;
+}
+
+.list li:hover {
+  transform: scale(1.02);
+  border-radius: 1rem;
+  
+}
+
+/* Image Styles */
+.list li img {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Div Styles within List Items */
+.list li div {
+  flex: 1;
+  padding: 0.5rem 1rem;
+}
+
+/* Quantity Selector */
+.list li select {
+  width: 5rem;
+  border: 1px solid #ff6f00;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  padding: 0.2rem;
+  background-color: #ecf0f1;  
+  color: #2c3e50;
+}
+
+/* Remove Button Styles */
+.list .remove_button {
+  border-radius: 0.5rem;
+  border: none;
+  padding: 0.5rem 1.5rem;
+  color: white;
+  background-color: #e74c3c;
+  transition: all 0.3s;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.list .remove_button:hover {
+  background-color: #c0392b;
+  transform: scale(1.05);
+}
+
+/* Checkout Section */
+.checkout {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  flex: 1;
+  height: 22rem;
+  border: 1px solid #ff6f00;
+  border-radius: 1.5rem;
+  padding: 2rem;
+  margin: 1rem;
+  background: white;
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Checkout Details */
+.checkout > div {
+  font-size: 1.3rem;
+  padding: bottom 2rem; ;
+  margin: 1rem 0;
+  color: #2c3e50;
+  text-align: left;
+  width: 100%;
+}
+
+/* Count and Price Labels */
+.checkout .foods_count::before {
+  content: 'Items in Cart: ';
+  font-weight: bold;
+}
+
+.checkout .total_price::before {
+  content: 'Total Amount: ';
+  font-weight: bold;
+}
+
+/* Checkout Button */
+.checkout a {
+  padding: 1rem 2rem;
+  color: white;
+  background: #ff6f00;
+  border-radius: 0.5rem;
+  text-align: center;
+  text-decoration: none;
+  font-size: 1.2rem;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.checkout a:hover {
+  background: #ff7b00;
+  transform: translateY(-2px);
+}
