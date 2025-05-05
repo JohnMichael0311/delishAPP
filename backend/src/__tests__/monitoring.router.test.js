@@ -18,6 +18,15 @@ jest.mock('../middleware/admin.mid.js', () => (req, res, next) => {
   next();
 });
 
+beforeAll(() => {
+  jest.spyOn(console, 'error').mockImplementation(() => {});
+});
+afterAll(() => {
+  if (console.error.mockRestore) {
+    console.error.mockRestore();
+  }
+});
+
 describe('Monitoring Router', () => {
   let app;
   beforeEach(() => {

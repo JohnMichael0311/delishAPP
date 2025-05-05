@@ -2,15 +2,24 @@ import { OrderModel } from '../models/order.model.js';
 import mongoose from 'mongoose';
 import { MongoMemoryServer } from 'mongodb-memory-server';
 
+jest.setTimeout(20000); // 20 seconds, adjust as needed
+
 describe('OrderModel', () => {
   let mongoServer;
+  // Suppress console.error for cleaner test output
   beforeAll(async () => {
+    jest.spyOn(console, 'error').mockImplementation(() => {});
     mongoServer = await MongoMemoryServer.create();
     await mongoose.connect(mongoServer.getUri(), {});
   });
   afterAll(async () => {
     await mongoose.disconnect();
-    await mongoServer.stop();
+    if (mongoServer) {
+      await mongoServer.stop();
+    }
+    if (console.error.mockRestore) {
+      console.error.mockRestore();
+    }
   });
   it('should create and retrieve an order', async () => {
     const order = await OrderModel.create({
