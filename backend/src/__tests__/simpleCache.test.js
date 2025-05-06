@@ -23,8 +23,7 @@
 // });
 
 import { cache, client } from '../utils/simpleCache.js';
-
-jest.setTimeout(15000); // Extend timeout for Redis + CI
+jest.setTimeout(30000); // Extend timeout for Redis + CI
 
 beforeAll(async () => {
   if (!client.isOpen) {
