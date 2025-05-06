@@ -278,12 +278,19 @@ export const CACHE_TTL = {
 };
 
 // ✅ Proper Redis client creation with Upstash TLS compatibility
+// const client = createClient({
+//   url: process.env.REDIS_URL,
+//   socket: {
+//     tls: process.env.REDIS_URL?.startsWith('rediss://'), // TLS only if using rediss://
+//   },
+// });
 const client = createClient({
-  url: process.env.REDIS_URL,
+  url: process.env.REDIS_URL || 'redis://127.0.0.1:6379',
   socket: {
-    tls: process.env.REDIS_URL?.startsWith('rediss://'), // TLS only if using rediss://
+    tls: process.env.REDIS_URL?.startsWith('rediss://'),
   },
 });
+
 
 // ✅ Don't auto-connect here; instead export client and let tests/app control it
 const metrics = {
