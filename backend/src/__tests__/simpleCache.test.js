@@ -22,19 +22,18 @@
 //   });
 // });
 
-
 import { cache, client } from '../utils/simpleCache.js';
 
-jest.setTimeout(15000); // Extend timeout for Redis + slow CI
+jest.setTimeout(15000); // Extend timeout for Redis + CI
 
 beforeAll(async () => {
   if (!client.isOpen) {
-    await client.connect(); // ✅ Make sure Redis is connected
+    await client.connect(); // Ensure connection before tests
   }
 });
 
 afterAll(async () => {
-  await client.quit(); // ✅ Close Redis connection after tests
+  await client.quit(); // Gracefully close after tests
 });
 
 describe('SimpleCache core functionality', () => {
