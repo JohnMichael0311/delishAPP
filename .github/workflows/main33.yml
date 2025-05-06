@@ -34,6 +34,7 @@ jobs:
           # Add any secrets you need here using GitHub Secrets
           MONGO_URI: ${{ secrets.MONGO_URI }}
           STRIPE_SECRET_KEY: ${{ secrets.STRIPE_SECRET_KEY }}
+          REDIS_URL: ${{ secrets.REDIS_URL }} 
         run: |
           cd backend
           npm test
